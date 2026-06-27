@@ -1,0 +1,11 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+UserSettings/
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln

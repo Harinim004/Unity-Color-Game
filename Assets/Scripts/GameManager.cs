@@ -2,20 +2,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CubeBehaviour[] cubes;
+    // Array of all interactable objects
+    public InteractableObject[] interactables;
 
-    public CubeBehaviour correctCube;
+    // The randomly selected correct object
+    public InteractableObject correctObject;
 
     void Start()
     {
-        foreach (CubeBehaviour cube in cubes)
+        // Assign a random color to each interactable object
+        foreach (InteractableObject obj in interactables)
         {
-            cube.SetRandomColor();
+            obj.SetRandomColor();
         }
 
-        int index =
-            Random.Range(0, cubes.Length);
+        // Randomly select one object as the correct object
+        int randomIndex = Random.Range(0, interactables.Length);
 
-        correctCube = cubes[index];
+        correctObject = interactables[randomIndex];
     }
 }

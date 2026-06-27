@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 150321005}
   - component: {fileID: 150321009}
   m_Layer: 0
-  m_Name: Cube2
+  m_Name: Interactable2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 150321004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalPosition: {x: 0, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -830,8 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee778c3e9a005754e9d60ef09c19080e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
-  gameManager: {fileID: 2097076255}
+  interactionDistance: 10
+  gameManager: {fileID: 2097076257}
   uiManager: {fileID: 1893947558}
   audioManager: {fileID: 793042284}
 --- !u!1 &335512543
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 335512544}
   - component: {fileID: 335512548}
   m_Layer: 0
-  m_Name: Cube1
+  m_Name: Interactable1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ Transform:
   m_GameObject: {fileID: 335512543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1, z: 2}
+  m_LocalPosition: {x: -2.5, y: 1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 365207547}
   - component: {fileID: 365207551}
   m_Layer: 0
-  m_Name: Cube3
+  m_Name: Interactable3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,7 +1058,7 @@ Transform:
   m_GameObject: {fileID: 365207546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: 2}
+  m_LocalPosition: {x: 2.5, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3196,7 +3196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097076256}
-  - component: {fileID: 2097076255}
+  - component: {fileID: 2097076257}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3204,23 +3204,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2097076255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097076254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d326369e39dc7e841a93280db7f56fa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubes:
-  - {fileID: 335512548}
-  - {fileID: 150321009}
-  - {fileID: 365207551}
-  correctCube: {fileID: 0}
 --- !u!4 &2097076256
 Transform:
   m_ObjectHideFlags: 0
@@ -3236,6 +3219,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2097076257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097076254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d326369e39dc7e841a93280db7f56fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactables:
+  - {fileID: 335512548}
+  - {fileID: 150321009}
+  - {fileID: 365207551}
+  correctObject: {fileID: 0}
 --- !u!4 &182948732586451058
 Transform:
   m_ObjectHideFlags: 0
